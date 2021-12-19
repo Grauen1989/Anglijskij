@@ -59,13 +59,9 @@ public class Random_words {
             else
                 System.out.println("Ты не молодец");*/
         }
+
         System.out.println(words);
-        int randy = (int) (Math.random () * quantityWords);
-        System.out.println(perevod.get(2));
-    /*    if (perevod.get(randy).equals(words.get(randy)))
-            System.out.println("Ты молодец");
-        else
-            System.out.println("Ты не молодец"); */
+
     }
 
 }
