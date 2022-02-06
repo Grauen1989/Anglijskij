@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /*
-Что я хочу от программы?
-1) вводим в консоль число которое задаст количество слов из массива (или списка).
-2) программа поочередно выдает слова (без их повторения). Мы пишем их перевод. Если не верно - программа сама выдает перевод.
-3) программа выдает произношение слова
+Что я хочу от программы в будущем?
+1) вводим в консоль число, которое задаст количество слов из массива (или списка);
+2) программа поочередно выдает слова (без их повторения). Мы пишем их перевод. Если не верно - программа сама выдает перевод;
+3) программа выдает произношение слова.
  */
 
 public class Random_words {
@@ -29,7 +29,7 @@ public class Random_words {
         words.add ("wash");
         words.add ("cotton");
 
-        ArrayList <String> perevod  = new ArrayList<String>();
+      /*  ArrayList <String> perevod  = new ArrayList<String>();
         words.add ("боль");
         words.add ("носки");
         words.add ("ботинки");
@@ -41,7 +41,7 @@ public class Random_words {
         words.add ("чай");
         words.add ("костюм");
         words.add ("мыть");
-        words.add ("хлопок");
+        words.add ("хлопок"); */
 
         int quantityWords = words.size();
         System.out.println("Эта программа выводит случайные английские слова, начиная с 14.04.20. Слов в программе: " + quantityWords);
@@ -50,17 +50,11 @@ public class Random_words {
         int c = in.nextInt ();
         for (int i = 1; i<=c; i++)
         {
-            String vvod = in.nextLine();
             int randy = (int) (Math.random () * quantityWords);
             System.out.println(words.get(randy));
-            System.out.println("Как переводится это слово?");
-          /* if (perevod.get(randy).equals(words.get(randy)))
-                System.out.println("Ты молодец");
-            else
-                System.out.println("Ты не молодец");*/
+            String vvod = in.nextLine();
+            //почему при запуске программа выдает вначале сразу два слова? Я хочу, чтобы она выдавала по одному, т.е. выдает слово - я ввожу перевод, выдает следующее слово - я ввожу перевод и т.д.
         }
-
-        System.out.println(words);
 
     }
 
